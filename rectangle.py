@@ -14,7 +14,7 @@ class Rectangle:
         """ 
         pass
 
-    def perimeter(self) -> float:
+    def perimeter(self):
         """
         This method finds the perimeter of the rectangle.
         Args:
@@ -22,7 +22,8 @@ class Rectangle:
         Returns:
             float or int: return perimeter of the rectangle if the rectangle is valid, 0 otherwise
         """
-        pass
+        perimeter = (self.a + self.b)*2
+        return perimeter
 
     def area(self) -> float:
         """
@@ -33,3 +34,5 @@ class Rectangle:
             float or int:  return area of the rectangle if the rectangle is valid, 0 otherwise 
         """
         pass
+x=Rectangle(10.0, 2.0)
+print(x.perimeter())

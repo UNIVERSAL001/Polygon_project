@@ -33,6 +33,9 @@ class Rectangle:
         Returns:
             float or int:  return area of the rectangle if the rectangle is valid, 0 otherwise 
         """
-        pass
+        area=self.a*self.b
+        return area
+    
+
 x=Rectangle(10.0, 2.0)
-print(x.perimeter())
+print(x.area())

@@ -14,8 +14,12 @@ class Circle:
         Returns:
             bool: True if the circle is valid, False otherwise
         """
-        pass
-    
+        if self.radius<0:
+            return False
+        else:
+            return True
+
+
     def diameter(self) -> float:
         '''
         This method finds the diameter of the circle.
@@ -24,8 +28,12 @@ class Circle:
         Returns:
             float: return diameter of the circle if the circle is valid, 0 otherwise
         '''
-        pass
-    
+        if self.radius<0:
+            return 0
+        else:
+            return self.radius*2
+        
+
     def circumference(self) -> float:
         '''
         This method finds the circumference of the circle.
@@ -34,7 +42,10 @@ class Circle:
         Returns:
             float: return circumference of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        if self.radius<0:
+            return 0
+        else:
+            return 2*pi*self.radius
     
     def area(self) -> float:
         '''
@@ -44,4 +55,13 @@ class Circle:
         Returns:
             float: return area of the circle if the circle is valid, 0 otherwise
         '''
-        pass
+        if self.radius<0:
+            return 0
+        else:
+            return pi*pow(self.radius,2)
+
+
+x = Circle(14.0)
+print(x.area())
+
+# Tugadi

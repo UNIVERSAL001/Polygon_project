@@ -16,7 +16,11 @@ class Triangle:
         Returns:
             bool: True if the triangle is valid, False otherwise
         '''
-        pass
+        if self.a<0 or self.b<0 or self.c<0:
+            return False
+        else:
+            return True
+
     
     def get_type(self) -> str:
         '''
@@ -24,8 +28,15 @@ class Triangle:
 
         Note: typies are 'Teng yonli', 'Teng tomonli', 'Turli tomonli'
         '''
-        pass
+        if self.a==self.b and self.b==self.c and self.a==self.c:
+            return 'Teng tomonli'
+        if self.a==self.b or self.b==self.c or self.a==self.c:
+            return 'Teng yonli'
         
+        if self.a>self.b or self.a<self.b or self.a<self.c or self.a>self.c or self.b<self.c or self.b>self.c:
+            return 'Turli tomonli'
+        
+
     def perimeter(self) -> float:
         '''
         This method finds the perimeter of the triangle.
@@ -34,7 +45,12 @@ class Triangle:
         Returns:
             float: return perimeter of the triangle if the triangle is valid, 0 otherwise
         '''
-        pass
+        if self.a<0 or self.b<0 or self.c<0:
+            return 0
+        else:
+            return self.a+self.b+self.c
+
+
 
     def area(self) -> float:
         '''
@@ -44,4 +60,14 @@ class Triangle:
         Returns:
             float: return area of the triangle if the triangle is valid, 0 otherwise
         '''
-        pass
+        p=self.a+self.b+self.c
+        if self.a<0 or self.b<0 or self.c<0:
+            return 0
+        else:
+            return sqrt(p*(p-self.a)*(p-self.b)*(p-self.c))
+
+
+x=Triangle(3,7,5)
+print(x.area())
+
+# Tugadi
